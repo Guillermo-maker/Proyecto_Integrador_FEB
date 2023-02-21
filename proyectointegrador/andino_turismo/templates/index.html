@@ -1,0 +1,389 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Andino Turismo</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="{% static 'img/logo.png' %}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+<!-- Topbar Start -->
+<div class="container-fluid d-none d-lg-block">
+    <div class="row align-items-center py-4 px-xl-5">
+        <div class="col-lg-3">
+            <a href="http://127.0.0.1:8000/" class="text-decoration-none">
+                <img src="{% static 'img/logo.jpg' %}" style="height: 100px" width="100px">
+            </a>
+        </div>
+        <div class="col-lg-3 text-right">
+            <div class="d-inline-flex align-items-center">
+                <i class="fa fa-2x fa-map-marker-alt text-primary mr-3"></i>
+                <div class="text-left">
+                    <h6 class="font-weight-semi-bold mb-1">Nuestra Sede</h6>
+                    <small>Huallil 9139, Cordoba, Argentina </small>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 text-right">
+            <div class="d-inline-flex align-items-center">
+                <i class="fa fa-2x fa-envelope text-primary mr-3"></i>
+                <div class="text-left">
+                    <h6 class="font-weight-semi-bold mb-1">Envianos un Email</h6>
+                    <small>andinoturismo@gmail.com</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 text-right">
+            <div class="d-inline-flex align-items-center">
+                <i class="fa fa-2x fa-phone text-primary mr-3"></i>
+                <div class="text-left">
+                    <h6 class="font-weight-semi-bold mb-1">Llamanos Al</h6>
+                    <small>+54-9-351-6880970</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid">
+        <div class="row border-top px-xl-5">
+
+            <div class="col-lg-12">
+                <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
+                    <a href="" class="text-decoration-none d-block d-lg-none">
+                        <h1 class="m-0"><span class="text-primary">ANDINO</span>TURISMO</h1>
+                    </a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav py-0" >
+                            
+                            <a href="{% static 'index.html'%}" class="nav-item nav-link active">Home</a>
+                            <a href="#section1" class="nav-item nav-link" style="margin-left: 50px;">Opiniones</a>
+                            <a href="#section2" class="nav-item nav-link" style="margin-left: 50px;">Noticias</a>
+                           
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" style="margin-left: 50px;">Viajes</a>
+                                <div class="dropdown-menu rounded-0 m-0">
+                                    <a href="http://127.0.0.1:8000/listaviaje" class="dropdown-item">Lista Viajes</a>
+                                    <a href="http://127.0.0.1:8000/agregarviaje" class="dropdown-item">Agregar Viajes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="btn btn-primary py-2 px-4 ml-auto d-none d-lg-block" href="http://127.0.0.1:8000/admin">Log
+                        In</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 pb-5 mb-5">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#header-carousel" data-slide-to="1"></li>
+                <li data-target="#header-carousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="min-height: 300px;">
+                    <img class="position-relative w-100" src="{%static 'img/G_obelisco2.jpeg'%}" style="min-height: 300px; object-fit: cover;">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center">
+                        <div class="p-5" style="width: 100%; max-width: 900px;">
+                            <h1 class="display-3 text-white mb-md-4">ANDINO TURISMO</h1>
+
+                            <h5 class="subtitulo">
+                                <span
+                                   class="txt-rotate"
+                                   data-period="2000"
+                                   data-rotate='[ "Conoce Nuevos Lugares Maravillosos" ]'></span>
+                              </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" style="min-height: 300px;">
+                    <img class="position-relative w-100" src="{%static 'img/G_plaza.jpg'%}" style="min-height: 300px; object-fit: cover;">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center">
+                        <div class="p-5" style="width: 100%; max-width: 900px;">
+                            <h1 class="display-3 text-white mb-md-4">ANDINO TURISMO</h1>
+                            <h5 class="subtitulo">
+                                <span
+                                   class="txt-rotate"
+                                   data-period="2000"
+                                   data-rotate='[ "Visita Esta Ciudad Hermosa" ]'></span>
+                              </h5>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="carousel-item" style="min-height: 300px;">
+                    <img class="position-relative w-100" src="{%static 'img/G_observatorio.jpg'%}" style="min-height: 300px; object-fit: cover;">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center">
+                        <div class="p-5" style="width: 100%; max-width: 900px;">
+                            <h1 class="display-3 text-white mb-md-4">ANDINO TURISMO</h1>
+                            <h5 class="subtitulo">
+                                <span
+                                   class="txt-rotate"
+                                   data-period="2000"
+                                   data-rotate='[ "Momentos inolvidables!" ]'></span>
+                              </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Carousel End -->
+
+<!-- Paradas -->
+<div class="container-fluid py-5">
+    <div class="container pt-5 pb-3">
+        <div class="text-center mb-5">
+            <h1 id="section2">Nuestras Paradas</h1>
+        </div>
+        <div class="row pb-3">
+            <div class="col-lg-4 mb-4">
+                <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                    <img class="img-fluid" src="{% static 'img/Planetario.png' %}" alt="">
+                    <a class="blog-overlay text-decoration-none" href="">
+                        <h5 class="text-white mb-3">EL PLANETARIO GALILEO GALILEI </h5>
+                        
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                    <img class="img-fluid" src="{% static 'img/plaza_mayo.png' %}" width="9000">
+                    <a class="blog-overlay text-decoration-none" href="">
+                        <h5 class="text-white mb-3">LA PLAZA DE MAYO</h5>
+                        
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                    <img class="img-fluid" src="{% static 'img/Obelisco.png' %}" alt="">
+                    <a class="blog-overlay text-decoration-none" href="">
+                        <h5 class="text-white mb-3">EL OBELISCO</h5>
+                        
+                    </a>
+                </div>
+            </div>
+        </div>        
+    </div>
+    </div>
+</div>
+<!-- Paradas End -->
+
+<!-- Team Start -->
+<div class="container-fluid py-5">
+    <div class="container pt-5 pb-3">
+        <div class="text-center mb-5">
+            <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Choferes</h5>
+            <h1> Nuestro equipo de Choferes Profesionales </h1>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-3 text-center team mb-4">
+                <div class="team-item rounded overflow-hidden mb-2">
+                    <div class="team-img position-relative">
+                        <img class="img-fluid" src="{% static 'img/colectivero2.png' %}" alt="" width="250" height="250">
+                        <div class="team-social">
+                            <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>  
+                    <div class="bg-secondary p-4">
+                        <h5>Pablo Rodriguez</h5>
+                        <p class="m-0">Chofer Matriculado</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 text-center team mb-4">
+                <div class="team-item rounded overflow-hidden mb-2">
+                    <div class="team-img position-relative">
+                        <img class="img-fluid" src="{% static 'img/franco.jpg' %}" alt="" width="250" height="250">
+                        <div class="team-social">
+                            <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="bg-secondary p-4">
+                        <h5>Santiago Gonzales</h5>
+                        <p class="m-0">Chofer Matriculado</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 text-center team mb-4">
+                <div class="team-item rounded overflow-hidden mb-2">
+                    <div class="team-img position-relative">
+                        <img class="img-fluid" src="{% static 'img/Chofer.jpg' %}" alt=""width="250" height="250">
+                        <div class="team-social">
+                            <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="bg-secondary p-4">
+                        <h5>Gustavo Fring</h5>
+                        <p class="m-0">Chofer Matriculado</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 text-center team mb-4">
+                <div class="team-item rounded overflow-hidden mb-2">
+                    <div class="team-img position-relative">
+                        <img class="img-fluid" src="{% static 'img/lauti.jpg' %}" alt="" width="250" height="250">
+                        <div class="team-social">
+                            <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="bg-secondary p-4">
+                        <h5>Martin Estigarribia</h5>
+                        <p class="m-0">Chofer Matriculado</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+
+
+
+<!-- Compromiso -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-5">
+                <img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'img/logo.png' %}" alt="">
+            </div>
+            <div class="col-lg-7">
+                <div class="text-left mb-4">
+                    <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;" id="section1">Andino Turismo
+                        </h5>
+                    <h1>Nuestro compromiso con esta bella ciudad:</h1>
+                </div>
+
+                <p>Desde muy joven siempre me senti muy apasionado con la ciudad de Buenos Aires. Sus imponentes edificios, los bellos parques y monumentos. Me enamore de la ciudad y de su gente, recorri cada uno de sus cuadras, paradas mas bonitas y esos sitios donde uno tiene que vivirlos por si mismos para entenderlos. Con todo este conocimiento que me dio la ciudad, decidi devolverselo en forma de servicio a la comunidad. Asi todo el mundo puede conocer la ciudad y enamorarse como yo lo hice. </p>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Compromiso -->
+
+<!-- Comentarios Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Comentarios</h5>
+            <h1>Estos son algunos de los clientes que confiaron en nuestros sevicios! Se parte de la familia!</h1>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="owl-carousel testimonial-carousel">
+                    <div class="text-center">
+                        <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                        <h4 class="font-weight-normal mb-4">Realmente estoy muy feliz de haber usado "Andino Turismo", me facilito un monton la vida y lo mejor es que recorri Bs.As de una manera  muy placentera. 5 Estrellas</h4>
+                        <img class="img-fluid mx-auto mb-3" src="{% static 'img/carran.jpeg' %}" alt="">
+                        <h5 class="m-0">Fernando</h5>
+                        <span>Enero, 2021</span>
+                    </div>
+
+                    <div class="text-center">
+                        <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                        <h4 class="font-weight-normal mb-4">No hay nada que puede decir que no se haya dicho! El servicio Excelente, mucha buena onda y con mucha predisposicion, y que decir de las Paradas! 5 ESTRELLAS LE DOY!!</h4>
+                        <img class="img-fluid mx-auto mb-3" src="{% static 'img/guille.jpeg' %}" alt="">
+                        <h5 class="m-0">Mario</h5>
+                        <span>Junio, 2022</span>
+                    </div>
+
+                    <div class="text-center">
+                        <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                        <h4 class="font-weight-normal mb-4">Yo soy de Korea del Sur y es la primara vez que viajo a Argentina, si no hubiera sido por los chicos de Andino Turismo jamas hubiera descubierto un pais tan hermoso como este! 5 ESTRELLAS</h4>
+                        <img class="img-fluid mx-auto mb-3" src="{% static 'img/mujer.jpg' %}" alt="">
+                        <h5 class="m-0">Kim yeung sang</h5>
+                        <span>Agosto, 2020</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Comentarios End -->
+
+
+
+<!-- Footer Start -->
+
+<div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5"
+     style="border-color: rgba(256, 256, 256, .1) !important;">
+    <div class="row">
+        <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+            <p class="m-0 text-white">&copy; <a href="#">Andino Turismo</a>. Todos los derechos reservados. </a>
+            </p>
+        </div>
+        <div class="col-lg-10 text-md-left">
+            <ul class="nav d-inline-flex">
+                <input type="text" class="form-control border-light" style="padding: 20px;" placeholder="Your Opinion">
+            </ul>
+        </div>
+        <div class="col-lg-9">
+            <ul class="nav d-inline-flex">
+                <button class="btn btn-primary px-4" onclick="mostrar()" style="padding:10px">Send</button>
+            </ul>
+    </div>
+</div>
+<!-- Footer End -->
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'lib/easing/easing.min.js' %}"></script>
+<script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+
+<!-- Contact Javascript File -->
+<script src="{% static 'mail/jqBootstrapValidation.min.js' %}"></script>
+<script src="{% static 'mail/contact.js' %}"></script>
+
+<!-- Template Javascript -->
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

@@ -1,0 +1,236 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Andino Turismo</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="{% static 'img/logo.png' %}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+<!-- Topbar Start -->
+<div class="container-fluid d-none d-lg-block">
+    <div class="row align-items-center py-4 px-xl-5">
+        <div class="col-lg-3">
+            <a href="http://127.0.0.1:8000/" class="text-decoration-none">
+                <img src="{% static 'img/logo.jpg' %}" style="height: 100px" width="100px">
+            </a>
+        </div>
+        <div class="col-lg-3 text-right">
+            <div class="d-inline-flex align-items-center">
+                <i class="fa fa-2x fa-map-marker-alt text-primary mr-3"></i>
+                <div class="text-left">
+                    <h6 class="font-weight-semi-bold mb-1">Nuestra Sede</h6>
+                    <small>Hueallil 9139, Cordoba, Argentina </small>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 text-right">
+            <div class="d-inline-flex align-items-center">
+                <i class="fa fa-2x fa-envelope text-primary mr-3"></i>
+                <div class="text-left">
+                    <h6 class="font-weight-semi-bold mb-1">Envianos un Email</h6>
+                    <small>andinoturismo@gmail.com</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 text-right">
+            <div class="d-inline-flex align-items-center">
+                <i class="fa fa-2x fa-phone text-primary mr-3"></i>
+                <div class="text-left">
+                    <h6 class="font-weight-semi-bold mb-1">Llamanos Al</h6>
+                    <small>+54-9-351-6880970</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid">
+        <div class="row border-top px-xl-5">
+
+            <div class="col-lg-12">
+                <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
+                    <a href="" class="text-decoration-none d-block d-lg-none">
+                        <h1 class="m-0"><span class="text-primary">ANDINO</span>TURISMO</h1>
+                    </a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav py-0" >
+                            
+                            <a href="{% static 'index.html'%}" class="nav-item nav-link active">Home</a>
+                            <a href="#section1" class="nav-item nav-link" style="margin-left: 50px;">Opiniones</a>
+                            <a href="#section2" class="nav-item nav-link" style="margin-left: 50px;">Noticias</a>
+                           
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" style="margin-left: 50px;">Viajes</a>
+                                <div class="dropdown-menu rounded-0 m-0">
+                                    <a href="http://127.0.0.1:8000/listaviaje " class="dropdown-item">Lista Viajes</a>
+                                    <a href="http://127.0.0.1:8000/agregarviaje" class="dropdown-item">Agregar Viajes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="btn btn-primary py-2 px-4 ml-auto d-none d-lg-block" href="http://127.0.0.1:8000/admin">Log
+                        In</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+  
+<!-- Header End -->
+
+<!--LISTA DE LIBROS-->
+
+
+
+
+
+
+
+
+
+
+<!-- Blog Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="row pb-3">
+                    {% for v in viajes %}
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                            
+                            <img class="img-fluid" src="{% static 'img/BsAS.gif' %}" alt="">
+                            
+                            <a class="blog-overlay text-decoration-none" href="">
+                                <p style=" margin-bottom: 220px;color: rgb(255, 255, 255);" >{{ v.nombre }}</p> 
+                                <h5 class="text-white mb-3"  > {{ v.recorrido }} </h5>
+                                <p>{{ v.dia }} </p>
+
+                                <p style="margin-left: auto;color: rgb(255, 251, 251);" > {{ v.hora_inicio }} </p>
+                            </a>
+
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <div class="col-12">
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination pagination-lg justify-content-center mb-0">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                        <span class="sr-only">Siguiente</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mt-5 mt-lg-0">
+                <!-- Palabras del CEO -->
+                <div class="d-flex flex-column text-center bg-dark rounded mb-5 py-5 px-4">
+                    <img src="{% static 'img/logo.jpg' %}" class="img-fluid rounded-circle mx-auto mb-3"
+                         style="width: 100px;">
+
+                    <p class="text-white m-0" style="margin-top: 10px;" >“Viajar y conocer nuevos lugares es una experiencias que todo el mundo tiene que vivir ” </p>
+                </div>
+
+                <!-- Search Form -->
+                <div class="mb-5">
+                    <form action="">
+                        <div class="input-group">
+                            <input type="text" class="form-control form-control-lg" placeholder="Buscar por titulo" name="buscar">
+                            <button type="submit" class="boton" color[[]>Buscar</button>
+                        </div>
+                    </form>
+                </div>
+
+              
+
+                <!-- Recent Post -->
+                
+
+                <!-- Tag Cloud -->
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Blog End -->
+<!-- Footer Start -->
+
+<div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5"
+style="border-color: rgba(256, 256, 256, .1) !important;">
+<div class="row">
+   <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+       <p class="m-0 text-white">&copy; <a href="#">Andino Turismo</a>. Todos los derechos reservados. </a>
+       </p>
+   </div>
+   <div class="col-lg-10 text-md-left">
+       <ul class="nav d-inline-flex">
+           <input type="text" class="form-control border-light" style="padding: 20px;" placeholder="Your Opinion">
+       </ul>
+   </div>
+   <div class="col-lg-9">
+       <ul class="nav d-inline-flex">
+           <button class="btn btn-primary px-4" onclick="mostrar()" style="padding:10px">Enviar</button>
+       </ul>
+</div>
+</div>
+<!-- Footer End -->
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'lib/easing/easing.min.js' %}"></script>
+<script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+
+<!-- Contact Javascript File -->
+<script src="{% static 'mail/jqBootstrapValidation.min.js' %}"></script>
+<script src="{% static 'mail/contact.js' %}"></script>
+
+<!-- Template Javascript -->
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
