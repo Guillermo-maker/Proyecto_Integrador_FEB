@@ -25,3 +25,6 @@ Para entrar a la pagina hay que hacer:
 luego..
 
    ``` python manage.py runserver ```
+
+
+## Disfruta de una pagina hecha con mucho esfuerzo!!!
