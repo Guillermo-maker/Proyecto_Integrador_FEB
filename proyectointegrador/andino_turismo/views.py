@@ -23,12 +23,8 @@ def register(request):
     return render(request, 'register.html')
 
 
-def books(request):
-    return render(request, 'books.html')
-
-
 def listaviaje(request):
-    viajes=Viaje.objects.all( )
+    viajes=Viaje.objects.all()
     queryset = request.GET.get("buscar")
     if queryset:
         viajes = Viaje.objects.filter(
@@ -36,7 +32,7 @@ def listaviaje(request):
         )
         
         
-    return render(request, 'listaviaje.html',context={"viaje":viajes}   )
+    return render(request, 'listaviaje.html',context={"viajes":viajes}   )
 
 
 def agregarviaje_view(request):
@@ -51,8 +47,8 @@ def agregarviaje(request):
     print(f"---{request.POST}---")
 
     bus = Bus.objects.filter(numero_unidad=int(request.POST['bus']))
-    chofer = Chofer.objects.filter(nombre=str(request.POST['chofer']))
-    recorrido = Recorrido.objects.filter(nombre=str(request.POST['recorrido']))
+    chofer = Chofer.objects.filter(nro_documento=int(request.POST['chofer']))
+    recorrido = Recorrido.objects.filter(numero_recorrido=int(request.POST['recorrido']))
 
     nombre = request.POST['nombre']
     dia = request.POST['dia']
@@ -66,7 +62,7 @@ def agregarviaje(request):
 
 
     new_viaje = Viaje(nombre=nombre, dia=dia, hora_inicio_prevista =hora_inicio_prevista , hora_inicio=hora_inicio,
-                      hora_fin=hora_fin, numero=numero,
+                      hora_fin=hora_fin, numero=numero, bus = bus, chofer = chofer, recorrido = recorrido
                       )
     new_viaje.save()
     return render(request, 'agregarviaje.html')

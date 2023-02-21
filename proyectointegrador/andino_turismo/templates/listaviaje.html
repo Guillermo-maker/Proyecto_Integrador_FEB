@@ -104,9 +104,7 @@
   
 <!-- Header End -->
 
-<!--LISTA DE LIBROS-->
-
-
+<!--LISTA DE VIAJES-->
 
 
 
@@ -121,7 +119,7 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="row pb-3">
-                    {% for v in viajes %}
+                    {% for l in viajes %}
 
                     <div class="col-lg-6 mb-4">
                         <div class="blog-item position-relative overflow-hidden rounded mb-2">
@@ -129,11 +127,11 @@
                             <img class="img-fluid" src="{% static 'img/BsAS.gif' %}" alt="">
                             
                             <a class="blog-overlay text-decoration-none" href="">
-                                <p style=" margin-bottom: 220px;color: rgb(255, 255, 255);" >{{ v.nombre }}</p> 
-                                <h5 class="text-white mb-3"  > {{ v.recorrido }} </h5>
-                                <p>{{ v.dia }} </p>
+                                <p style=" margin-bottom: 220px;color: rgb(255, 255, 255);" >{{ l.numero}}</p> 
+                                <h5 class="text-white mb-3"  > {{ l.nombre}} </h5>
+                                <p>{{ l.recorrido }} </p>
 
-                                <p style="margin-left: auto;color: rgb(255, 251, 251);" > {{ v.hora_inicio }} </p>
+                                <p style="margin-left: auto;color: rgb(255, 251, 251);" > {{ l.bus }} </p>
                             </a>
 
                         </div>
