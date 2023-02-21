@@ -106,18 +106,18 @@
 
 <!--LISTA DE VIAJES-->
 
-
-
-
-
-
-
-
-<!-- Blog Start -->
 <div class="container-fluid py-5">
     <div class="container py-5">
         <div class="row">
             <div class="col-lg-8">
+            <div class="mb-5">
+                <form action="">
+                    <div class="input-group">
+                        <input type="text" class="form-control form-control-lg" placeholder="Buscar por Nombre" name="buscar">
+                        <button type="submit" class="boton" color[[]>Buscar</button>
+                    </div>
+                </form>
+            </div> 
                 <div class="row pb-3">
                     {% for l in viajes %}
 
@@ -159,34 +159,7 @@
                         </nav>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-lg-4 mt-5 mt-lg-0">
-                <!-- Palabras del CEO -->
-                <div class="d-flex flex-column text-center bg-dark rounded mb-5 py-5 px-4">
-                    <img src="{% static 'img/logo.jpg' %}" class="img-fluid rounded-circle mx-auto mb-3"
-                         style="width: 100px;">
-
-                    <p class="text-white m-0" style="margin-top: 10px;" >“Viajar y conocer nuevos lugares es una experiencias que todo el mundo tiene que vivir ” </p>
-                </div>
-
-                <!-- Search Form -->
-                <div class="mb-5">
-                    <form action="">
-                        <div class="input-group">
-                            <input type="text" class="form-control form-control-lg" placeholder="Buscar por titulo" name="buscar">
-                            <button type="submit" class="boton" color[[]>Buscar</button>
-                        </div>
-                    </form>
-                </div>
-
-              
-
-                <!-- Recent Post -->
-                
-
-                <!-- Tag Cloud -->
-                
+            </div>           
             </div>
         </div>
     </div>
